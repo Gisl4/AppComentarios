@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-content">
             <p class="title">
-                “Angular is a fremework for building SPA sites created by Google.”
+                “Angular is a framework for building SPA sites created by Google.”
             </p>
             <br>
             <p class="subtitle">
@@ -27,45 +27,45 @@
 
     <br>
     <!-- Comentarios -->
-    <article class="media" *ngFor="let coment of comments; let num = index" >
+    <article class="media" *ngFor="let coment of comments; let num = index">
         <figure class="media-left">
             <p class="image is-64x64">
-            <img src="https://bulma.io/assets/images/placeholders/128x128.png" />
+                <img src="https://bulma.io/assets/images/placeholders/128x128.png" />
             </p>
         </figure>
         <div class="media-content">
             <div class="content">
-            <p>
-                <strong>{{ coment.name }}</strong> <small>{{ coment.alias }}</small> <small>31m</small>
-                <br />
-                {{ coment.comment}}
-            </p>
+                <p>
+                    <strong>{{ coment.name }}</strong> <small>{{ coment.alias }}</small> <small>31m</small>
+                    <br />
+                    {{ coment.comment }}
+                </p>
             </div>
             <nav class="level is-mobile">
-            <div class="level-left">
-                <a class="level-item">
-                <span class="icon is-small"><i class="fas fa-reply"></i></span>
-                </a>
-                <a class="level-item">
-                <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-                </a>
-                <a class="level-item">
-                <span class="icon is-small"><i class="fas fa-heart"></i></span>
-                </a>
-            </div>
+                <div class="level-left">
+                    <a class="level-item">
+                        <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                    </a>
+                    <a class="level-item">
+                        <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                    </a>
+                </div>
             </nav>
-            </div>
+        </div>
         <div class="media-right">
-            <button class="delete" (click)="delete(num)"></button>
+            <button class="delete" (click)="delete(coment._id)"></button>
         </div>
     </article>
 
     <br>
     <!-- Post / Submit -->
-     <article class="media">
+    <article class="media">
         <figure class="media-left">
             <p class="image is-64x64">
-            <img src="https://bulma.io/assets/images/placeholders/128x128.png" />
+                <img src="https://bulma.io/assets/images/placeholders/128x128.png" />
             </p>
         </figure>
         <div class="media-content">
@@ -81,7 +81,7 @@
             <nav class="level">
                 <div class="level-left">
                     <div class="level-item">
-                        <a class="button is-info" (click)="addcomment()">Submit</a>
+                        <a class="button is-info" (click)="addComment()">Submit</a> <!-- Cambiado a addComment() -->
                     </div>
                 </div>
             </nav>

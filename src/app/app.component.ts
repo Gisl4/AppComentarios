@@ -8,8 +8,8 @@ import { BodyComponent } from "./components/body/body.component";
   standalone: true,
   imports: [RouterOutlet, NavbarComponent, BodyComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'appComentarios';
+  title = 'appComments';
 }
